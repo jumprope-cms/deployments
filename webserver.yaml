@@ -15,14 +15,14 @@ spec:
       containers:
         - name: server
           image: docker.io/dkimot/jumprope-webserver
-          ev:
+          env:
           - DEST_PATH: '/usr/www'
             DATA_PATH: '/tmp/repos/data'
             PAGEKIT_PATH: '/tmp/repos/pagekit'
             SITE_NAME: 'calvinarts.co'
         - name: git-sync
           image: docker.io/dkimot/jumprope-git-sync
-          ev:
+          env:
           - REPO_QUANT: 2
             REPO_0_LOCAL: '/tmp/repos/data'
             REPO_0_REMOTE: 'https://www.github.com/dkimot/fcbdata'
