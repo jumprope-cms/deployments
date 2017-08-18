@@ -16,15 +16,24 @@ spec:
         - name: server
           image: docker.io/dkimot/jumprope-webserver
           env:
-          - DEST_PATH: '/usr/www'
-            DATA_PATH: '/tmp/repos/data'
-            PAGEKIT_PATH: '/tmp/repos/pagekit'
-            SITE_NAME: 'calvinarts.co'
+          - name: DEST_PATH
+            value: '/usr/www'
+          - name: DATA_PATH
+            value: '/tmp/repos/data'
+          - name: PAGEKIT_PATH
+            value: '/tmp/repos/pagekit'
+          - name: SITE_NAME
+            value: 'calvinarts.co'
         - name: git-sync
           image: docker.io/dkimot/jumprope-git-sync
           env:
-          - REPO_QUANT: 2
-            REPO_0_LOCAL: '/tmp/repos/data'
-            REPO_0_REMOTE: 'https://www.github.com/dkimot/fcbdata'
-            REPO_1_LOCAL: '/tmp/repos/pagekit'
-            REPO_1_LOCAL: 'https://www.github.com/dkimot/pagekit'
+          - name: REPO_QUANT
+            value: 2
+          - name: REPO_0_LOCAL
+            value: '/tmp/repos/data'
+          - name: REPO_0_REMOTE
+            value: 'https://www.github.com/dkimot/fcbdata'
+          - name: REPO_1_LOCAL
+            value: '/tmp/repos/pagekit'
+          - name: REPO_1_LOCAL
+            value: 'https://www.github.com/dkimot/pagekit'
