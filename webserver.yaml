@@ -28,7 +28,7 @@ spec:
           image: docker.io/dkimot/jumprope-git-sync
           env:
           - name: REPO_QUANT
-            value: 2
+            value: '2'
           - name: REPO_0_LOCAL
             value: '/tmp/repos/data'
           - name: REPO_0_REMOTE
