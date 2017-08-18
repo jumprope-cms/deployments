@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: event-bus
+spec:
+    selector:
+      app: bus
+    ports:
+      - name: events
+        protocol: TCP
+        port: 7000

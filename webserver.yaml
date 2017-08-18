@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webserver
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      volumes:
+        - name: local
+          emptyDir: {}
+      containers:
+        - name: server
+          image: docker.io/dkimot/jumprope-webserver
+          ev:
+          - DEST_PATH: '/usr/www'
+            DATA_PATH: '/tmp/repos/data'
+            PAGEKIT_PATH: '/tmp/repos/pagekit'
+            SITE_NAME: 'www.fastcashbuyersutah.com'
+        - name: git-sync
+          image: docker.io/dkimot/jumprope-git-sync
+          ev:
+          - REPO_QUANT: 2
+            REPO_0_LOCAL: '/tmp/repos/data'
+            REPO_0_REMOTE: 'https://www.github.com/dkimot/fcbdata'
+            REPO_1_LOCAL: '/tmp/repos/pagekit'
+            REPO_1_LOCAL: 'https://www.github.com/dkimot/pagekit'
