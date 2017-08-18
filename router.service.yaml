@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: event-bus
+  name: router
 spec:
     selector:
-      app: bus
+      app: router
     ports:
       - name: http
         protocol: TCP
