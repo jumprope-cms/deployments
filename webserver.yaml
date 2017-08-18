@@ -19,7 +19,7 @@ spec:
           - DEST_PATH: '/usr/www'
             DATA_PATH: '/tmp/repos/data'
             PAGEKIT_PATH: '/tmp/repos/pagekit'
-            SITE_NAME: 'www.fastcashbuyersutah.com'
+            SITE_NAME: 'calvinarts.co'
         - name: git-sync
           image: docker.io/dkimot/jumprope-git-sync
           ev:
