@@ -36,3 +36,5 @@ spec:
             value: 'https://www.github.com/dkimot/pagekit'
           - name: NODE_ENV
             value: 'production'
+          - name: SUBSCRIBER_PORT
+            value: 5000
