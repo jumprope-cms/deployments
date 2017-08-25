@@ -12,3 +12,6 @@ spec:
       containers:
       - name: router
         image: docker.io/dkimot/jumprope-router
+        env:
+        - name: NODE_ENV
+          value: 'production'

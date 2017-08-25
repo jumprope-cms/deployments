@@ -12,3 +12,6 @@ spec:
       containers:
       - name: bus
         image: docker.io/dkimot/jumprope-bus
+        env:
+        - name: NODE_ENV
+          value: 'production'

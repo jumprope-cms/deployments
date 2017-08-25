@@ -12,3 +12,6 @@ spec:
       containers:
       - name: logger
         image: docker.io/dkimot/jumprope-logger
+        env:
+        - name: NODE_ENV
+          value: 'production'
