@@ -16,4 +16,4 @@ spec:
         - name: NODE_ENV
           value: 'production'
         - name: SUBSCRIBER_PORT
-          value: 5000
+          value: '5000'
