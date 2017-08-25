@@ -16,12 +16,6 @@ spec:
         - name: server
           image: docker.io/dkimot/jumprope-webserver
           env:
-          - name: DEST_PATH
-            value: '/usr/www'
-          - name: DATA_PATH
-            value: '/tmp/repos/data'
-          - name: PAGEKIT_PATH
-            value: '/tmp/repos/pagekit'
           - name: SITE_NAME
             value: 'calvinarts.co'
           - name: REPO_QUANT
