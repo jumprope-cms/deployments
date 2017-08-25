@@ -13,21 +13,6 @@ spec:
         - name: local
           emptyDir: {}
       containers:
-        - name: git-sync
-          image: docker.io/dkimot/jumprope-git-sync
-          env:
-          - name: REPO_QUANT
-            value: '2'
-          - name: REPO_0_LOCAL
-            value: '/tmp/repos/data'
-          - name: REPO_0_REMOTE
-            value: 'https://www.github.com/dkimot/fcbdata'
-          - name: REPO_1_LOCAL
-            value: '/tmp/repos/pagekit'
-          - name: REPO_1_LOCAL
-            value: 'https://www.github.com/dkimot/pagekit'
-          - name: NODE_ENV
-            value: 'production'
         - name: server
           image: docker.io/dkimot/jumprope-webserver
           env:
@@ -39,5 +24,15 @@ spec:
             value: '/tmp/repos/pagekit'
           - name: SITE_NAME
             value: 'calvinarts.co'
+          - name: REPO_QUANT
+            value: '2'
+          - name: REPO_0_LOCAL
+            value: '/tmp/repos/data'
+          - name: REPO_0_REMOTE
+            value: 'https://www.github.com/dkimot/fcbdata'
+          - name: REPO_1_LOCAL
+            value: '/tmp/repos/pagekit'
+          - name: REPO_1_LOCAL
+            value: 'https://www.github.com/dkimot/pagekit'
           - name: NODE_ENV
             value: 'production'
