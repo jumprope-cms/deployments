@@ -32,3 +32,5 @@ spec:
             value: 'production'
           - name: SUBSCRIBER_PORT
             value: '5000'
+          - name: DEST_PATH
+            value: /usr/src/app/www
